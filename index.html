@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- tailwind elements package -->
+    <link
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
+    rel="stylesheet" />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/tw-elements/css/tw-elements.min.css" />
+  <script src="https://cdn.tailwindcss.com/3.3.0"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        fontFamily: {
+          sans: ["Roboto", "sans-serif"],
+          body: ["Roboto", "sans-serif"],
+          mono: ["ui-monospace", "monospace"],
+        },
+      },
+      corePlugins: {
+        preflight: false,
+      },
+    };
+  </script>
+</head>
+<!-- nav bar -->
+<div>
+    <div class="flex justify-between items-center m-20 ">
+      <img src="05. Frames.png "style= "height: 45px" alt="Bequran.net Logo">
+      <ul class="flex gap-8 pr-5 pl-5 ">
+        <li clas="list-none rounded-md md:transition-all hover:bg-blue-400 hover:text-white hover:p-3 " data-value="Home"><a className="text-none sm:border-solid text-lg" href='#'>Home</a></li>
+        <li class="list-none rounded-md md:transition-all hover:bg-blue-400 hover:text-white hover:p-3" data-value="About"><a className="text-none sm:border-solid text-lg" href='#'>About</a></li>
+        <li class="list-none rounded-md md:transition-all hover:bg-blue-400 hover:text-white hover:p-3 " data-value="Courses"><a className="text-none sm:border-solid text-lg" href='#'></a>
+            <div class="relative" data-twe-dropdown-ref>
+                <button
+                  class="flex items-center  transition duration-150"
+                  type="button"
+                  id="dropdownMenuButton1"
+                  data-twe-dropdown-toggle-ref
+                  aria-expanded="false"
+                  data-twe-ripple-init
+                  data-twe-ripple-color="light">
+                  Courses
+                  <span class="ms-2 w-2 [&>svg]:h-5 [&>svg]:w-5">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor">
+                      <path
+                        fill-rule="evenodd"
+                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                        clip-rule="evenodd" />
+                    </svg>
+                  </span>
+                </button>
+                <ul
+                  class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-base shadow-lg data-[twe-dropdown-show]:block dark:bg-surface-dark"
+                  aria-labelledby="dropdownMenuButton1"
+                  data-twe-dropdown-menu-ref>
+                  <li>
+                    <a
+                      class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                      href="#"
+                      data-twe-dropdown-item-ref
+                      >Quran Courses</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                      href="#"
+                      data-twe-dropdown-item-ref
+                      >Arabic Courses</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                      href="#"
+                      data-twe-dropdown-item-ref
+                      >Islamic Courses</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                      href="#"
+                      data-twe-dropdown-item-ref
+                      >Ijazah Course</a
+                    >
+                  </li>
+                </ul>
+              </div></li>
+        <li class="list-none rounded-md md:transition-all hover:bg-blue-400 hover:text-white hover:p-3" data-value="Blog"><a className="text-none sm:border-solid text-lg" href='#'>Blog</a></li>
+        <li class="list-none rounded-md md:transition-all hover:bg-blue-400 hover:text-white hover:p-3" data-value="Contact"><a className="text-none sm:border-solid text-lg" href='#'>Contact</a></li>
+      </ul>
+      <a class="text-none sm:border-solid bg-blue-500 text-white text-lg pr-7 pl-7 pt-3 pb-3 mr-3 ml-3 rounded-md md:transition-all hover:bg-yellow-400" href='#'>login</a>
+    </div>
+</div>
+<!-- SeC1 -->
+<div class="ml-8">
+    <p class="text-yellow-400 text-2xl pb-3">The Leader in Online Learning</p>
+    <h1 class="text-5xl text-blue-600 pb-4">Best Online <span> Quran Classes </span></h1>
+    <p class=" text-xl text-blue-800 pb-4 " >Are you a Muslim resident ? Be Quran academy is providing you with the best online Quran classes..
+    </p>
+    <!-- search -->
+    <div
+  class="relative flex w-60 ml-7 mb-8 mt-4"
+  data-twe-input-wrapper-init
+  data-twe-input-group-ref>
+  <input
+    type="search"
+    class="peer py-[0.32rem]  outline-none transition-all duration-200 [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0"
+    placeholder="Search"
+    aria-label="Search"
+    id="exampleFormControlInput"
+    aria-describedby="basic-addon1" />
+  <label
+    for="exampleFormControlInput"
+    class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-400 dark:peer-focus:text-primary"
+    >Search
+  </label>
+  <button
+    class="relative z-[2] -ms-0.5 flex items-center rounded-e bg-primary px-5  text-xs font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+    type="button"
+    id="button-addon1"
+    data-twe-ripple-init
+    data-twe-ripple-color="light">
+    <span class="[&>svg]:h-5 [&>svg]:w-5">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+      </svg>
+    </span>
+  </button>
+    </div>
+<!-- search end -->
+    <ul>
+        <li class="pb-3 pl-5 text-blue-800 text-lg">Access more online courses.
+        </li>
+        <li class="pb-3 pl-5 text-blue-800 text-lg">Modern Standards Arabic
+        </li>
+        <li class="pb-3 pl-5 text-blue-800 text-lg">Recitation Quran Course
+        </li>
+    </ul>
+</div>
+<!-- sec2 -->
+ <div class=" flex justify-between bg-blue-500 h-80 mb-60 mt-8 pl-7 pr-7">
+    <div class="pt-4 pl-7">
+        <video class="rounded-md ml-60"
+                    controls
+                    width="500"
+                    loop 
+                    muted 
+                    autoplay 
+                    poster="img.jpg" 
+                    preload="none">
+                    <source src="Bequran Vid.mp4">
+                    <track src=""  kind=""   label="" >
+                </video>
+    </div>
+    <div class="content-center mr-60 ">
+        <button class="bg-white rounded-md p-4 mr-3 mt-3 hover:bg-yellow-500 duration-200 hover:text-white text-xl">Flexible classes</button>
+        <button class="bg-white rounded-md p-4 mr-3 mt-3 hover:bg-yellow-500 duration-200 hover:text-white text-xl">Flexible classes</button>
+        <br>
+        <button class="bg-white rounded-md p-4 mr-3 mt-3 hover:bg-yellow-500 duration-200 hover:text-white text-xl">Flexible classes</button>
+        <button class="bg-white rounded-md p-4 mr-3 mt-3 hover:bg-yellow-500 duration-200 hover:text-white text-xl">Flexible classes</button>
+    </div>
+
+ </div>
+<body>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/js/tw-elements.umd.min.js"></script>
+</body>
+</html>
